@@ -1,0 +1,65 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity ADC is
+    Port (
+	 -- Global variables
+		clk : in STD_LOGIC;
+		Count : out STD_LOGIC_vector(3 downto 0);
+		
+	 -- Required ADC communication serial
+		ADC_CONVST : out STD_LOGIC;
+		ADC_SCK : out STD_LOGIC;
+		ADC_SDI : out STD_LOGIC;
+		ADC_SDO : in STD_LOGIC
+		
+	 -- 
+		
+    );
+end ADC;
+
+
+--	Steps for comm:
+--		1. Get CS : 0 (active low) / Start conversion ! 
+--		2. Do PWM with ADC value
+--		3. Be able to get commands from ESP using GPIO (includes coding esp and web application <EZ>)
+
+
+architecture ARC_ADC of ADC IS
+-- Any signals
+	signal Cou : STD_LOGIC_vector(3 downto 0) := "0000";
+	signal CS : STD_LOGIC := '1';
+	signal sclk : STD_LOGIC;
+begin
+-- Any Process
+	process(clk)
+	begin
+	-- Get counter running up
+		if clk'event and clk='1' then
+			if Cou < 15 then 
+				Cou <= Cou+1;
+
+				if Cou = 1 then 
+					CS <= '0';
+				end if;
+			else
+				Cou <= (others => '0');
+			end if;
+		end if;
+		
+		-- Forcing SCLK to mimic CLK
+		if CS = '1' then
+				SCLK <= '1';
+		else
+				SCLK <= clk;
+		end if;
+		-- if ChipSelect is 1 then its not active , otherwise if its active assign it to real fpga clock.
+		
+	-- Assigning all signals to outputs
+		ADC_CONVST <= CS;
+		ADC_SCK <= sclk;
+		Count <= Cou;
+	end process;
+end architecture ARC_ADC;

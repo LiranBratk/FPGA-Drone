@@ -1,0 +1,106 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/COU
+Eadc
+Z0 w1705960338
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dE:/DroneQuartus
+Z6 8E:\DroneQuartus\ADC.vhd
+Z7 FE:\DroneQuartus\ADC.vhd
+l0
+L6
+VKbaa^=gFnX5=djd1IB1[I1
+!s100 G;=7f=jml48C^MH2?:6X_3
+Z8 OV;C;10.5b;63
+32
+Z9 !s110 1705960342
+!i10b 1
+Z10 !s108 1705960342.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:\DroneQuartus\ADC.vhd|
+Z12 !s107 E:\DroneQuartus\ADC.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Aarc_adc
+R1
+R2
+R3
+R4
+Z15 DEx4 work 3 adc 0 22 Kbaa^=gFnX5=djd1IB1[I1
+l35
+L30
+VHe9OIMXLL?EPFC]X]TW9W1
+!s100 SmXZckCGa3I^Tim@7L3?i1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Edronetop
+Z16 w1705958898
+Z17 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z18 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z19 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+Z20 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z21 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z22 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+R3
+R4
+Z23 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R5
+Z24 8E:/DroneQuartus/simulation/modelsim/DroneTop.vho
+Z25 FE:/DroneQuartus/simulation/modelsim/DroneTop.vho
+l0
+L38
+V@T<PBEnNG<mUUJkiAdi;03
+!s100 4]9S<D6?RXjF>OV>9_oFo0
+R8
+32
+R9
+!i10b 1
+R10
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/DroneQuartus/simulation/modelsim/DroneTop.vho|
+Z27 !s107 E:/DroneQuartus/simulation/modelsim/DroneTop.vho|
+!i113 1
+R13
+R14
+Astructure
+R17
+R18
+R19
+R20
+R21
+R22
+R3
+R4
+R23
+DEx4 work 8 dronetop 0 22 @T<PBEnNG<mUUJkiAdi;03
+l103
+L65
+VGf2`AgVYUjcI<mU4dSF7[2
+!s100 JlYhni1N50NMCLTRlj[o83
+R8
+32
+R9
+!i10b 1
+R10
+R26
+R27
+!i113 1
+R13
+R14

@@ -1,0 +1,156 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity adc_ltc2308 is
+    Port (
+        clk : in STD_LOGIC;
+        measure_start : in STD_LOGIC;
+        measure_ch : in STD_LOGIC_VECTOR (2 downto 0);
+        measure_done : out STD_LOGIC;
+        measure_dataread : out STD_LOGIC_VECTOR (11 downto 0);
+        ADC_CONVST : out STD_LOGIC; -- 1bit, CS, active low
+        ADC_SCK : out STD_LOGIC; -- ADC CLOCK to FPGA
+        ADC_SDI : out STD_LOGIC; -- FPGA to ADC
+        ADC_SDO : in STD_LOGIC  -- ADC to FPGA
+    );
+end adc_ltc2308;
+
+architecture Behavioral of adc_ltc2308 is
+    constant DATA_BITS_NUM : integer := 12;
+    constant CMD_BITS_NUM : integer := 6;
+
+    signal pre_measure_start : STD_LOGIC;
+    signal reset_n : STD_LOGIC;
+    signal tick : STD_LOGIC_VECTOR(15 downto 0);
+    signal clk_enable : STD_LOGIC;
+    signal read_data : STD_LOGIC_VECTOR(DATA_BITS_NUM - 1 downto 0);
+    signal write_pos : INTEGER := DATA_BITS_NUM - 1;
+    signal measure_done : STD_LOGIC;
+    signal config_cmd : STD_LOGIC_VECTOR(CMD_BITS_NUM - 1 downto 0);
+    signal sdi_index : INTEGER := CMD_BITS_NUM - 2;
+
+begin
+    -- Create trigger message: reset_n
+    process(clk)
+    begin
+        if rising_edge(clk) or falling_edge(reset_n) then
+            pre_measure_start <= measure_start;
+        end if;
+    end process;
+
+    reset_n <= (not pre_measure_start and measure_start) or '1';
+
+    -- Tick
+    process(clk, reset_n)
+    begin
+        if falling_edge(clk) or falling_edge(reset_n) then
+            if not reset_n = '0' then
+                tick <= (others => '0');
+            elsif tick < to_unsigned(tDONE, 16) then
+                tick <= tick + 1;
+            end if;
+        end if;
+    end process;
+
+    -- ADC_CONVST
+    ADC_CONVST <= '1' when to_integer(unsigned(tick)) >= tCONVST_HIGH_START and to_integer(unsigned(tick)) < tCONVST_HIGH_END else '0';
+
+    -- ADC_SCK
+    process(clk, reset_n)
+    begin
+        if falling_edge(clk) or falling_edge(reset_n) then
+            if not reset_n = '0' then
+                clk_enable <= '0';
+            elsif to_integer(unsigned(tick)) >= tCLK_START and to_integer(unsigned(tick)) < tCLK_END then
+                clk_enable <= '1';
+            else
+                clk_enable <= '0';
+            end if;
+        end if;
+    end process;
+
+    ADC_SCK <= clk_enable and clk;
+
+    -- Read data
+    process(clk, reset_n)
+    begin
+        if falling_edge(clk) or falling_edge(reset_n) then
+            if not reset_n = '0' then
+                read_data <= (others => '0');
+                write_pos <= DATA_BITS_NUM - 1;
+            elsif clk_enable = '1' then
+                read_data(write_pos) <= ADC_SDO;
+                write_pos <= write_pos - 1;
+            end if;
+        end if;
+    end process;
+
+    -- Measure done
+    measure_done <= '1' when to_integer(unsigned(tick)) = 107 else '0';
+
+    process(clk, reset_n)
+    begin
+        if falling_edge(clk) or falling_edge(reset_n) then
+            if not reset_n = '0' then
+                measure_done <= '0';
+            elsif to_integer(unsigned(tick)) = 108 then
+                measure_done <= '1';
+            else
+                measure_done <= '0';
+            end if;
+        end if;
+    end process;
+
+    -- ADC channel config
+    process(reset_n)
+    begin
+        if not reset_n = '0' then
+            case measure_ch is
+                when "000" =>
+                    config_cmd <= "1000" & "10" & "0";
+                when "001" =>
+                    config_cmd <= "1100" & "10" & "0";
+                when "010" =>
+                    config_cmd <= "1001" & "10" & "0";
+                when "011" =>
+                    config_cmd <= "1101" & "10" & "0";
+                when "100" =>
+                    config_cmd <= "1010" & "10" & "0";
+                when "101" =>
+                    config_cmd <= "1110" & "10" & "0";
+                when "110" =>
+                    config_cmd <= "1011" & "10" & "0";
+                when others =>
+                    config_cmd <= "1111" & "00";
+            end case;
+        end if;
+    end process;
+
+    -- Serial config command to ADC chip
+    process(clk)
+    begin
+        if falling_edge(reset_n) then
+            if reset_n = '0' then
+                config_init <= '1';
+                sdi_index <= CMD_BITS_NUM - 2;
+            elsif to_integer(unsigned(tick)) = tCONFIG_START then
+                config_init <= '1';
+                sdi_index <= CMD_BITS_NUM - 2;
+            elsif to_integer(unsigned(tick)) > tCONFIG_END then
+                config_done <= '1';
+                ADC_SDI <= '0';
+            elsif to_integer(unsigned(tick)) > tCONFIG_START and to_integer(unsigned(tick)) <= tCONFIG_END then
+                config_enable <= '1';
+                ADC_SDI <= config_cmd(sdi_index);
+                sdi_index <= sdi_index - 1;
+            else
+                config_enable <= '0';
+            end if;
+        end if;
+    end process;
+
+    measure_dataread <= read_data;
+
+end Behavioral;

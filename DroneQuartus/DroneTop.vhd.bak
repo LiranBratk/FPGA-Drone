@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity DroneTop is
+    Port (
+	 -- PWM outputs - 1bit
+		Q: out STD_LOGIC;
+	
+	 -- Global variables
+		gclk : in STD_LOGIC;
+	
+	 -- Required ADC communication serial
+		ADC_CONVST : out STD_LOGIC;
+		ADC_SCK : out STD_LOGIC;
+		ADC_SDI : out STD_LOGIC;
+		ADC_SDO : in STD_LOGIC
+    );
+end DroneTop;
+
+/* 
+	Goals for whole application:
+		1. Communicate with ADC, get value from potentiometer -> translate it to DutyCycle for PWM
+		2. Do PWM with ADC value
+		3. Be able to get commands from ESP using GPIO (includes coding esp and web application <EZ>)
+*/
+
+architecture ARC_DroneTop of DroneTop IS
+-- Any signals
+
+begin
+-- Any Process
+end architecture ARC_DroneTop
