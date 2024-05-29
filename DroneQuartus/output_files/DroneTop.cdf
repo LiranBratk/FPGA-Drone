@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA4U23) Path("E:/DroneQuartus/output_files/") File("DroneTop.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA4U23) Path("F:/DroneQuartus/output_files/") File("DroneTop.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -5,6 +5,7 @@ USE ieee.std_logic_unsigned.all;
 USE ieee.std_logic_arith.all;
 
 
+
 --  Entity Declaration
 
 ENTITY PWM_sig IS
@@ -12,9 +13,9 @@ ENTITY PWM_sig IS
 	PORT
 	(
 		rst : IN STD_LOGIC;
-		clk : IN STD_LOGIC;
+		gclk : IN STD_LOGIC;
 		
-		DC : IN STD_LOGIC_VECTOR(21 downto 0);
+		DC : IN INTEGER; -- Dfpga
 		pwm : OUT STD_LOGIC
 	);
 	-- {{ALTERA_IO_END}} DO NOT REMOVE THIS LINE!
@@ -26,43 +27,43 @@ END PWM_sig;
 
 ARCHITECTURE PWM_sig_architecture OF PWM_sig IS
 
-signal cou : std_logic_vector(21 downto 0);
+signal cou : integer := 0;
 signal flag : std_logic;
-
+signal FixedDC: integer;
+signal gclk : std_logic;
 begin
 
-process(clk,rst)
+process(gclk,rst)
 
 begin
 
 if rst = '1' then 
-	cou<=(others=>'0');
+	cou<= 0;
 	flag<= '1';
 	pwm<='0';
 	
-elsif clk'event and clk = '1' then
+elsif gclk'event and gclk = '1' then
 
+	FixedDC<=((5*(10**4))+((5*(10**4)*DC)/(4095))); -- Dfpga -> fixed duty cycle terms (1..2ms)
 
 	if flag = '1' then 
-		if (cou<= 1000000) then
-			cou<= cou+'1';
+		if (cou < 1000000) then
+			cou<= cou+1;
 			pwm<= '0';
 		else
 			flag<='0'; 
-			cou<=(others =>'0');
+			cou<= 0;
 		end if; 
 	else 
-		if (cou<=1000000) then
-			cou<=cou + '1';
-				if cou<=DC then
+		if (cou < 1000000) then
+			cou<=cou + 1;
+				if cou<=FixedDC then
 					pwm<='1';
 				else
 					pwm<='0';
 				end if;
-			
-
 		else 
-			cou<=(others=>'0');
+			cou<= 0;
 			flag<='0';
 		end if;
 end if;

@@ -1,20 +1,20 @@
-Fitter Status : Successful - Mon Feb 12 09:46:06 2024
+Fitter Status : Successful - Tue May 21 10:09:07 2024
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : DroneTop
 Top-level Entity Name : DroneTop
 Family : Cyclone V
 Device : 5CSEMA4U23C6
 Timing Models : Final
-Logic utilization (in ALMs) : 440 / 15,880 ( 3 % )
-Total registers : 925
-Total pins : 35 / 314 ( 11 % )
+Logic utilization (in ALMs) : 2,300 / 15,880 ( 14 % )
+Total registers : 1090
+Total pins : 19 / 314 ( 6 % )
 Total virtual pins : 0
 Total block memory bits : 278,528 / 2,764,800 ( 10 % )
 Total RAM Blocks : 34 / 270 ( 13 % )
-Total DSP Blocks : 1 / 84 ( 1 % )
+Total DSP Blocks : 8 / 84 ( 10 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 1 / 5 ( 20 % )
+Total PLLs : 0 / 5 ( 0 % )
 Total DLLs : 0 / 4 ( 0 % )

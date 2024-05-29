@@ -1,13 +1,7 @@
 
-State Machine - |DroneTop|PmodCLP:lcd_inst|stCur
-Name stCur.stCharDelay stCur.stActWr stCur.stInitDne stCur.stDisplayClear_Delay stCur.stDisplayCtrlSet_Delay stCur.stFunctionSet_Delay stCur.stFunctionSet stCur.stDisplayClear stCur.stDisplayCtrlSet stCur.stPowerOn_Delay 
-stCur.stPowerOn_Delay 0 0 0 0 0 0 0 0 0 0 
-stCur.stDisplayCtrlSet 0 0 0 0 0 0 0 0 1 1 
-stCur.stDisplayClear 0 0 0 0 0 0 0 1 0 1 
-stCur.stFunctionSet 0 0 0 0 0 0 1 0 0 1 
-stCur.stFunctionSet_Delay 0 0 0 0 0 1 0 0 0 1 
-stCur.stDisplayCtrlSet_Delay 0 0 0 0 1 0 0 0 0 1 
-stCur.stDisplayClear_Delay 0 0 0 1 0 0 0 0 0 1 
-stCur.stInitDne 0 0 1 0 0 0 0 0 0 1 
-stCur.stActWr 0 1 0 0 0 0 0 0 0 1 
-stCur.stCharDelay 1 0 0 0 0 0 0 0 0 1 
+State Machine - |DroneTop|RecieveLogic:Inst|state
+Name state.counts_for_8_bit state.wait_for_middle_point state.start_bit_skip state.wait_for_start_bit 
+state.wait_for_start_bit 0 0 0 0 
+state.start_bit_skip 0 0 1 1 
+state.wait_for_middle_point 0 1 0 1 
+state.counts_for_8_bit 1 0 0 1 

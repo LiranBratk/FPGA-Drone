@@ -1,0 +1,7 @@
+{
+	"common_dir" : "/home/imp/electronics/FPGA/FPGAProjects/my_first_hps-fpga_Test1/",
+	"acds_version" : "Version 16.0.0",
+	"platform" : "linux",
+	"os" : "LMDE MATE",
+	"qpf" : "soc_system.qpf"
+}

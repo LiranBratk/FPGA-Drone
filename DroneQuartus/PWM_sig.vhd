@@ -4,67 +4,57 @@ USE ieee.numeric_std.all;
 USE ieee.std_logic_unsigned.all;
 USE ieee.std_logic_arith.all;
 
-
---  Entity Declaration
-
+-- Entity Declaration
 ENTITY PWM_sig IS
-	-- {{ALTERA_IO_BEGIN}} DO NOT REMOVE THIS LINE!
-	PORT
-	(
-		rst : IN STD_LOGIC;
-		clk : IN STD_LOGIC;
-		
-		DC : IN STD_LOGIC_VECTOR(21 downto 0);
-		pwm : OUT STD_LOGIC
-	);
-	-- {{ALTERA_IO_END}} DO NOT REMOVE THIS LINE!
-
+    PORT
+    (
+        rst : IN STD_LOGIC;
+        clk : IN STD_LOGIC;
+        DC : IN INTEGER;      -- Duty cycle input
+        pwm : OUT STD_LOGIC   -- PWM output
+    );
 END PWM_sig;
 
-
---  Architecture Body
-
+-- Architecture Body
 ARCHITECTURE PWM_sig_architecture OF PWM_sig IS
+    SIGNAL cou : INTEGER := 0;           -- Counter
+    SIGNAL flag : STD_LOGIC;             -- Flag for state control
+    SIGNAL FixedDC : INTEGER;            -- Fixed duty cycle
+BEGIN
+    PROCESS(clk, rst)
+    BEGIN
+        IF rst = '1' THEN 
+            -- Reset condition
+            cou <= 0;
+            flag <= '1';
+            pwm <= '0';
+        ELSIF clk'EVENT AND clk = '1' THEN
+            -- Calculate fixed duty cycle (1..2ms range)
+            FixedDC <= ((5 * (10 ** 4)) + ((5 * (10 ** 4) * DC) / 4095));
 
-signal cou : std_logic_vector(21 downto 0);
-signal flag : std_logic;
-
-begin
-
-process(clk,rst)
-
-begin
-
-if rst = '1' then 
-	cou<=(others=>'0');
-	flag<= '1';
-	pwm<='0';
-	
-elsif clk'event and clk = '1' then
-
-
-	if flag = '1' then 
-		if (cou<= 1000000) then
-			cou<= cou+'1';
-			pwm<= '0';
-		else
-			flag<='0'; 
-			cou<=(others =>'0');
-		end if; 
-	else 
-		if (cou<=1000000) then
-			cou<=cou + '1';
-				if cou<=DC then
-					pwm<='1';
-				else
-					pwm<='0';
-				end if;
-		else 
-			cou<=(others=>'0');
-			flag<='0';
-		end if;
-end if;
-end if;
-end process;
-
+            IF flag = '1' THEN 
+                -- Off-period state
+                IF cou < 1000000 THEN
+                    cou <= cou + 1;
+                    pwm <= '0';
+                ELSE
+                    flag <= '0'; 
+                    cou <= 0;
+                END IF; 
+            ELSE 
+                -- On-period state
+                IF cou < 1000000 THEN
+                    cou <= cou + 1;
+                    IF cou <= FixedDC THEN
+                        pwm <= '1';
+                    ELSE
+                        pwm <= '0';
+                    END IF;
+                ELSE 
+                    cou <= 0;
+                    flag <= '0';
+                END IF;
+            END IF;
+        END IF;
+    END PROCESS;
 END PWM_sig_architecture;

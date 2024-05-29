@@ -1,0 +1,615 @@
+IP Upgrade report for soc_system
+Mon Apr 08 08:07:35 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Failed Upgrade IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; IP Upgrade Summary                                                         ;
++------------------------------+---------------------------------------------+
+; IP Components Upgrade Status ; Passed - Mon Apr 08 08:07:35 2024           ;
+; Quartus Prime Version        ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                ; soc_system                                  ;
+; Top-level Entity Name        ; ghrd                                        ;
+; Family                       ; Cyclone V                                   ;
++------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Failed Upgrade IP Components                                                                                                                                                     ;
++-------------+----------------+---------+-------------------------------------+----------------------+-----------------+----------------------------------------------------------+
+; Entity Name ; Component Name ; Version ; Original Source File                ; Generation File Path ; New Source File ; Message                                                  ;
++-------------+----------------+---------+-------------------------------------+----------------------+-----------------+----------------------------------------------------------+
+; soc_system  ; Qsys           ; 18.1    ; soc_system/synthesis/soc_system.qip ; soc_system.qsys      ;                 ; Error upgrading Platform Designer file "soc_system.qsys" ;
++-------------+----------------+---------+-------------------------------------+----------------------+-----------------+----------------------------------------------------------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "soc_system.qsys" to "soc_system.BAK.qsys"
+Info (11902): Backing up file "soc_system/synthesis/soc_system.vhd" to "soc_system.BAK.vhd"
+Info (11837): Started upgrading IP component Qsys with file "soc_system.qsys"
+Info: 2024.04.08.08:03:44 Info: Starting to upgrade the IP cores in the Platform Designer system
+Info: 2024.04.08.08:03:44 Info: Finished upgrading the ip cores
+Info: 2024.04.08.08:04:03 Info: Saving generation log to D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system
+Info: 2024.04.08.08:04:03 Info: Starting: Create simulation model
+Info: 2024.04.08.08:04:03 Info: qsys-generate D:\dev\FPGA-Drone\my_first_hps-fpga\Soc_system_clean\soc_system.qsys --simulation=VHDL --allow-mixed-language-simulation --output-directory=D:\dev\FPGA-Drone\my_first_hps-fpga\Soc_system_clean\soc_system\simulation --family="Cyclone V" --part=5CSEMA4U23C6
+Info: 2024.04.08.08:04:03 Info: Loading Soc_system_clean
+Info: 2024.04.08.08:04:04 Info: Reading input file
+Info: 2024.04.08.08:04:04 Info: Adding MemoryDMA [altera_avalon_sgdma 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module MemoryDMA
+Info: 2024.04.08.08:04:04 Info: Adding clk_0 [clock_source 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module clk_0
+Info: 2024.04.08.08:04:04 Info: Adding dma_0 [altera_avalon_dma 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module dma_0
+Info: 2024.04.08.08:04:04 Info: Adding fpga_only_master [altera_jtag_avalon_master 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module fpga_only_master
+Info: 2024.04.08.08:04:04 Info: Adding hps_0 [altera_hps 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module hps_0
+Info: 2024.04.08.08:04:04 Info: Adding hps_only_master [altera_jtag_avalon_master 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module hps_only_master
+Info: 2024.04.08.08:04:04 Info: Adding intr_capturer_0 [intr_capturer 1.0]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module intr_capturer_0
+Info: 2024.04.08.08:04:04 Info: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module jtag_uart
+Info: 2024.04.08.08:04:04 Info: Adding mm_clock_crossing_bridge_0 [altera_avalon_mm_clock_crossing_bridge 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module mm_clock_crossing_bridge_0
+Info: 2024.04.08.08:04:04 Info: Adding myBus [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module myBus
+Info: 2024.04.08.08:04:04 Info: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module onchip_memory2_0
+Info: 2024.04.08.08:04:04 Info: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module onchip_memory2_1
+Info: 2024.04.08.08:04:04 Info: Adding pio_led [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module pio_led
+Info: 2024.04.08.08:04:04 Info: Adding pio_reg1 [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module pio_reg1
+Info: 2024.04.08.08:04:04 Info: Adding pio_reg2 [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module pio_reg2
+Info: 2024.04.08.08:04:04 Info: Adding pio_reg3 [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module pio_reg3
+Info: 2024.04.08.08:04:04 Info: Adding pll_0 [altera_pll 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module pll_0
+Info: 2024.04.08.08:04:04 Info: Adding sysid_qsys [altera_avalon_sysid_qsys 18.1]
+Info: 2024.04.08.08:04:04 Info: Parameterizing module sysid_qsys
+Info: 2024.04.08.08:04:04 Info: Building connections
+Info: 2024.04.08.08:04:04 Info: Parameterizing connections
+Info: 2024.04.08.08:04:04 Info: Validating
+Info: 2024.04.08.08:04:12 Info: Done reading input file
+Info: 2024.04.08.08:04:15 Info: soc_system.MemoryDMA: Scatter-Gather DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: 2024.04.08.08:04:15 Info: soc_system.dma_0: DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: 2024.04.08.08:04:15 Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2024.04.08.08:04:15 Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2024.04.08.08:04:15 Warning: soc_system.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2024.04.08.08:04:15 Info: soc_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: 2024.04.08.08:04:15 Info: soc_system.pio_reg3: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2024.04.08.08:04:15 Info: soc_system.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: 2024.04.08.08:04:15 Info: soc_system.pll_0: Able to implement PLL with user settings
+Info: 2024.04.08.08:04:15 Info: soc_system.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: 2024.04.08.08:04:15 Info: soc_system.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Warning: 2024.04.08.08:04:15 Warning: soc_system.pll_0: pll_0.locked must be exported, or connected to a matching conduit.
+Warning: 2024.04.08.08:04:15 Warning: soc_system.MemoryDMA: Interrupt sender MemoryDMA.csr_irq is not connected to an interrupt receiver
+Warning: 2024.04.08.08:04:15 Warning: soc_system.dma_0: Interrupt sender dma_0.irq is not connected to an interrupt receiver
+Info: 2024.04.08.08:04:16 Info: soc_system: Generating soc_system "soc_system" for SIM_VHDL
+Info: 2024.04.08.08:04:26 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: 2024.04.08.08:04:26 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
+Info: 2024.04.08.08:04:26 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has burstcount signal 1 bit wide, but the slave is 0 bit wide.
+Info: 2024.04.08.08:04:26 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has address signal 4 bit wide, but the slave is 2 bit wide.
+Info: 2024.04.08.08:04:26 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has read signal 1 bit wide, but the slave is 0 bit wide.
+Info: 2024.04.08.08:04:26 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has byteenable signal 4 bit wide, but the slave is 0 bit wide.
+Info: 2024.04.08.08:04:26 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has debugaccess signal 1 bit wide, but the slave is 0 bit wide.
+Warning: 2024.04.08.08:04:27 Warning: hps_0.f2h_irq0: Cannot connect clock for irq_mapper.sender
+Warning: 2024.04.08.08:04:27 Warning: hps_0.f2h_irq0: Cannot connect reset for irq_mapper.sender
+Warning: 2024.04.08.08:04:27 Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+Warning: 2024.04.08.08:04:27 Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: 2024.04.08.08:04:34 Info: MemoryDMA: Starting RTL generation for module 'soc_system_MemoryDMA'
+Info: 2024.04.08.08:04:34 Info: MemoryDMA:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=soc_system_MemoryDMA --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0002_MemoryDMA_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0002_MemoryDMA_gen//soc_system_MemoryDMA_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0002_MemoryDMA_gen
+Info: 2024.04.08.08:04:36 Info: MemoryDMA: Done RTL generation for module 'soc_system_MemoryDMA'
+Info: 2024.04.08.08:04:36 Info: MemoryDMA: "soc_system" instantiated altera_avalon_sgdma "MemoryDMA"
+Info: 2024.04.08.08:04:36 Info: dma_0: softresetEnable = 1
+Info: 2024.04.08.08:04:36 Info: dma_0: Starting RTL generation for module 'soc_system_dma_0'
+Info: 2024.04.08.08:04:36 Info: dma_0:   Generation command is [exec D:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I D:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_dma -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_dma/generate_rtl.pl --name=soc_system_dma_0 --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0003_dma_0_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0003_dma_0_gen//soc_system_dma_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0003_dma_0_gen
+Info: 2024.04.08.08:04:37 Info: dma_0: # 2024.04.08 08:04:37 (*)   soc_system_dma_0: allowing these transactions: doubleword, word, hw, byte_access
+Info: 2024.04.08.08:04:37 Info: dma_0: Done RTL generation for module 'soc_system_dma_0'
+Info: 2024.04.08.08:04:37 Info: dma_0: "soc_system" instantiated altera_avalon_dma "dma_0"
+Info: 2024.04.08.08:04:38 Info: fpga_only_master: "soc_system" instantiated altera_jtag_avalon_master "fpga_only_master"
+Info: 2024.04.08.08:04:38 Info: hps_0: "Running  for module: hps_0"
+Info: 2024.04.08.08:04:39 Info: hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2024.04.08.08:04:39 Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2024.04.08.08:04:39 Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2024.04.08.08:04:42 Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
+Info: 2024.04.08.08:04:42 Info: intr_capturer_0: "soc_system" instantiated intr_capturer "intr_capturer_0"
+Info: 2024.04.08.08:04:42 Info: jtag_uart: Starting RTL generation for module 'soc_system_jtag_uart'
+Info: 2024.04.08.08:04:42 Info: jtag_uart:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0005_jtag_uart_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0005_jtag_uart_gen//soc_system_jtag_uart_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0005_jtag_uart_gen
+Info: 2024.04.08.08:04:42 Info: jtag_uart: Done RTL generation for module 'soc_system_jtag_uart'
+Info: 2024.04.08.08:04:42 Info: jtag_uart: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: 2024.04.08.08:04:42 Info: mm_clock_crossing_bridge_0: "soc_system" instantiated altera_avalon_mm_clock_crossing_bridge "mm_clock_crossing_bridge_0"
+Info: 2024.04.08.08:04:42 Info: myBus: Starting RTL generation for module 'soc_system_myBus'
+Info: 2024.04.08.08:04:42 Info: myBus:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_myBus --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0007_myBus_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0007_myBus_gen//soc_system_myBus_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0007_myBus_gen
+Info: 2024.04.08.08:04:43 Info: myBus: Done RTL generation for module 'soc_system_myBus'
+Info: 2024.04.08.08:04:43 Info: myBus: "soc_system" instantiated altera_avalon_pio "myBus"
+Info: 2024.04.08.08:04:43 Info: onchip_memory2_0: Starting RTL generation for module 'soc_system_onchip_memory2_0'
+Info: 2024.04.08.08:04:43 Info: onchip_memory2_0:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_onchip_memory2_0 --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0008_onchip_memory2_0_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0008_onchip_memory2_0_gen//soc_system_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0008_onchip_memory2_0_gen
+Info: 2024.04.08.08:04:43 Info: onchip_memory2_0: Done RTL generation for module 'soc_system_onchip_memory2_0'
+Info: 2024.04.08.08:04:43 Info: onchip_memory2_0: "soc_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: 2024.04.08.08:04:43 Info: onchip_memory2_1: Starting RTL generation for module 'soc_system_onchip_memory2_1'
+Info: 2024.04.08.08:04:43 Info: onchip_memory2_1:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_onchip_memory2_1 --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0009_onchip_memory2_1_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0009_onchip_memory2_1_gen//soc_system_onchip_memory2_1_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0009_onchip_memory2_1_gen
+Info: 2024.04.08.08:04:43 Info: onchip_memory2_1: Done RTL generation for module 'soc_system_onchip_memory2_1'
+Info: 2024.04.08.08:04:43 Info: onchip_memory2_1: "soc_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_1"
+Info: 2024.04.08.08:04:43 Info: pio_led: Starting RTL generation for module 'soc_system_pio_led'
+Info: 2024.04.08.08:04:43 Info: pio_led:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_pio_led --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0010_pio_led_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0010_pio_led_gen//soc_system_pio_led_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0010_pio_led_gen
+Info: 2024.04.08.08:04:44 Info: pio_led: Done RTL generation for module 'soc_system_pio_led'
+Info: 2024.04.08.08:04:44 Info: pio_led: "soc_system" instantiated altera_avalon_pio "pio_led"
+Info: 2024.04.08.08:04:44 Info: pio_reg3: Starting RTL generation for module 'soc_system_pio_reg3'
+Info: 2024.04.08.08:04:44 Info: pio_reg3:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_pio_reg3 --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0011_pio_reg3_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0011_pio_reg3_gen//soc_system_pio_reg3_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0011_pio_reg3_gen
+Info: 2024.04.08.08:04:44 Info: pio_reg3: Done RTL generation for module 'soc_system_pio_reg3'
+Info: 2024.04.08.08:04:44 Info: pio_reg3: "soc_system" instantiated altera_avalon_pio "pio_reg3"
+Info: 2024.04.08.08:04:44 Info: pll_0: Generating simgen model
+Info: 2024.04.08.08:05:02 Info: pll_0: Simgen was successful
+Info: 2024.04.08.08:05:02 Info: pll_0: "soc_system" instantiated altera_pll "pll_0"
+Info: 2024.04.08.08:05:02 Info: sysid_qsys: "soc_system" instantiated altera_avalon_sysid_qsys "sysid_qsys"
+Info: 2024.04.08.08:05:05 Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: 2024.04.08.08:05:13 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:13 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:14 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:14 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:15 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:15 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:16 Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:16 Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:17 Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:17 Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:18 Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:18 Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:05:24 Info: mm_interconnect_1: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: 2024.04.08.08:05:25 Info: mm_interconnect_2: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: 2024.04.08.08:05:25 Info: irq_mapper: "soc_system" instantiated altera_irq_mapper "irq_mapper"
+Info: 2024.04.08.08:05:25 Info: irq_mapper_001: "soc_system" instantiated altera_irq_mapper "irq_mapper_001"
+Info: 2024.04.08.08:05:25 Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
+Info: 2024.04.08.08:05:25 Info: jtag_phy_embedded_in_jtag_master: "fpga_only_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: 2024.04.08.08:05:25 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/simulation/submodules
+Info: 2024.04.08.08:05:25 Info: timing_adt: "fpga_only_master" instantiated timing_adapter "timing_adt"
+Info: 2024.04.08.08:05:26 Info: fifo: "fpga_only_master" instantiated altera_avalon_sc_fifo "fifo"
+Info: 2024.04.08.08:05:26 Info: b2p: "fpga_only_master" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: 2024.04.08.08:05:26 Info: p2b: "fpga_only_master" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: 2024.04.08.08:05:26 Info: transacto: "fpga_only_master" instantiated altera_avalon_packets_to_master "transacto"
+Info: 2024.04.08.08:05:26 Info: b2p_adapter: "fpga_only_master" instantiated channel_adapter "b2p_adapter"
+Info: 2024.04.08.08:05:26 Info: p2b_adapter: "fpga_only_master" instantiated channel_adapter "p2b_adapter"
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Authorized application D:\intelFPGA_lite\18.1\quartus\bin64\jtagserver.exe is enabled in the firewall.
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: ]2;Altera Nios II EDS 18.1 [gcc4]D:/intelfpga_lite/18.1/quartus/bin64/uniphy_mcc -ac_code sequencer_mc/ac_rom.s -inst_code sequencer_mc/inst_rom.s -ac_rom ../hps_AC_ROM.hex -inst_rom ../hps_inst_ROM.hex -header sequencer/sequencer_auto.h -vheader ../sequencer_auto_h.sv -ac_rom_init sequencer/sequencer_auto_ac_init.c -inst_rom_init sequencer
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: UniPHY Sequencer Microcode Compiler
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Copyright (C) 2018  Intel Corporation. All rights reserved.
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Reading sequencer_mc
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Reading sequencer_mc
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing ..
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing ..
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing ..
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Microcode compilation successful
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: D:/intelfpga_lite/18.1/quartus/../nios2eds/sdk2/bin
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS.
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0:
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: For information please visit https://aka.ms
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0:
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: child process exited abnormally
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: add_fileset_file: No such file C:/Users/45EB~1/AppData/Local/Temp/alt9821_5908465927160317650.dir/0006_s0_gen
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: Generation stopped, 10 or more modules remaining
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Execution of script generate_hps_sdram.tcl failed
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:26 Info:
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: ********************************************************************************************************************
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces:
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Use qsys-generate for a simpler command-line interface for generating IP.
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces:
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: Run ip-generate with switch --remove-qsys-generate-warning to prevent this notice from appearing in subsequent runs.
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces:
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: ********************************************************************************************************************
+Warning: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:30 Warning: Ignored parameter assignment device=5CSEMA4U23C6
+Warning: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:30 Warning: Ignored parameter assignment extended_family_support=true
+Warning: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Warning: hps_sdram: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Info: hps_sdram.pll_ref_clk: Elaborate: altera_clock_source
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Info: hps_sdram.pll_ref_clk:            $Revision: #1 $
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Info: hps_sdram.pll_ref_clk:            $Date: 2018/07
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Info: hps_sdram.global_reset: Elaborate: altera_reset_source
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Info: hps_sdram.global_reset:            $Revision: #1 $
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Info: hps_sdram.global_reset:            $Date: 2018/07
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Info: hps_sdram.global_reset: Reset is negatively asserted.
+Warning: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Warning: hps_sdram.p0: p0.oct_sharing must be exported, or connected to a matching conduit.
+Warning: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Warning: hps_sdram.p0: p0.io_int must be exported, or connected to a matching conduit.
+Warning: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Warning: hps_sdram.sequencer_mem: sequencer_mem.clken1 must be exported, or connected to a matching conduit.
+Warning: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Warning: hps_sdram.oct: oct.oct must be exported, or connected to a matching conduit.
+Warning: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Warning: hps_sdram.oct: oct.oct_sharing must be exported, or connected to a matching conduit.
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:36 Info: hps_sdram: Generating altera_mem_if_hps_emif "hps_sdram" for SIM_VERILOG
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:39 Info: Interconnect is inserted between master s0.mmr_avl and slave c0.csr because the master has burstcount signal 1 bit wide, but the slave is 0 bit wide.
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:42 Info: pll_ref_clk: "hps_sdram" instantiated altera_avalon_clock_source "pll_ref_clk"
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:42 Info: global_reset: "hps_sdram" instantiated altera_avalon_reset_source "global_reset"
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:42 Info: Reusing file C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0025_fpga_interfaces_gen/submodules
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:42 Info: pll: "hps_sdram" instantiated altera_mem_if_hps_pll "pll"
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:42 Info: p0: Generating clock pair generator
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:43 Info: p0: Generating hps_sdram_p0_altdqdqs
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:48 Info: p0: "hps_sdram" instantiated altera_mem_if_ddr3_hard_phy_core "p0"
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Authorized application D:\intelFPGA_lite\18.1\quartus\bin64\jtagserver.exe is enabled in the firewall.
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: ]2;Altera Nios II EDS 18.1 [gcc4]D:/intelfpga_lite/18.1/quartus/bin64/uniphy_mcc -ac_code sequencer_mc/ac_rom.s -inst_code sequencer_mc/inst_rom.s -ac_rom ../hps_AC_ROM.hex -inst_rom ../hps_inst_ROM.hex -header sequencer/sequencer_auto.h -vheader ../sequencer_auto_h.sv -ac_rom_init sequencer/sequencer_auto_ac_init.c -inst_rom_init sequencer
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: UniPHY Sequencer Microcode Compiler
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Copyright (C) 2018  Intel Corporation. All rights reserved.
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Info: Reading sequencer_mc
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Info: Reading sequencer_mc
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Info: Writing ..
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Info: Writing ..
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Info: Writing sequencer
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Info: Writing sequencer
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Info: Writing sequencer
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Info: Writing sequencer
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Info: Writing ..
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Info: Microcode compilation successful
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: D:/intelfpga_lite/18.1/quartus/../nios2eds/sdk2/bin
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS.
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0:
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: For information please visit https://aka.ms
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0:
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: child process exited abnormally
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: s0: add_fileset_file: No such file C:/Users/45EB~1/AppData/Local/Temp/alt9821_5908465927160317650.dir/0006_s0_gen
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: while executing
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: "add_fileset_file $file_name [::alt_mem_if::util::hwtcl_utils::get_file_type $file_name 0] PATH $file_pathname"
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: ("foreach" body line 4)
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: invoked from within
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: "foreach file_pathname $return_files_sw {
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces:         _dprint 1 "Preparing to add $file_pathname"
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces:         set file_name [file tail $file_pathname]
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces:         add_fileset_file $..."
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: (procedure "generate_sw" line 18)
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: invoked from within
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: "generate_sw $name $fileset"
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: (procedure "generate_files" line 37)
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: invoked from within
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: "generate_files $name SIM_VERILOG"
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: (procedure "generate_verilog_sim" line 3)
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: invoked from within
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: "generate_verilog_sim altera_mem_if_hhp_qseq_top"
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Info: s0: "hps_sdram" instantiated altera_mem_if_hhp_ddr3_qseq "s0"
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Error: Generation stopped, 10 or more modules remaining
+Error: 2024.04.08.08:05:51 Error: fpga_interfaces: 2024.04.08.08:05:51 Info: hps_sdram: Done "hps_sdram" with 16 modules, 61 files
+Info: 2024.04.08.08:05:52 Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Error: 2024.04.08.08:05:52 Error: Generation stopped, 196 or more modules remaining
+Info: 2024.04.08.08:05:52 Info: soc_system: Done "soc_system" with 79 modules, 121 files
+Error: 2024.04.08.08:05:52 Error: qsys-generate failed with exit code 1: 101 Errors, 11 Warnings
+Info: 2024.04.08.08:05:52 Info: Finished: Create simulation model
+Info: 2024.04.08.08:05:52 Info: Starting: Create Modelsim Project.
+Info: 2024.04.08.08:05:52 Info: sim-script-gen --spd=D:\dev\FPGA-Drone\my_first_hps-fpga\Soc_system_clean\soc_system\soc_system.spd --output-directory=D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/simulation
+Info: 2024.04.08.08:05:52 Info: Doing: ip-make-simscript --spd=D:\dev\FPGA-Drone\my_first_hps-fpga\Soc_system_clean\soc_system\soc_system.spd --output-directory=D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/simulation
+Info: 2024.04.08.08:05:54 Info: Generating the following file(s) for MODELSIM simulator in D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/simulation
+Info: 2024.04.08.08:05:54 Info:     mentor
+Info: 2024.04.08.08:05:55 Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib
+Info: 2024.04.08.08:05:55 Info: Generating the following file(s) for VCSMX simulator in D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/simulation
+Info: 2024.04.08.08:05:55 Info:     synopsys/vcsmx
+Info: 2024.04.08.08:05:55 Info:     synopsys/vcsmx
+Info: 2024.04.08.08:05:55 Info: Generating the following file(s) for NCSIM simulator in D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/simulation
+Info: 2024.04.08.08:05:55 Info:     cadence
+Info: 2024.04.08.08:05:55 Info:     cadence
+Info: 2024.04.08.08:05:55 Info:     cadence
+Info: 2024.04.08.08:05:55 Info:     30 .cds.lib files in cadence/cds_libs
+Info: 2024.04.08.08:05:55 Info: Generating the following file(s) for RIVIERA simulator in D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/simulation
+Info: 2024.04.08.08:05:55 Info:     aldec
+Info: 2024.04.08.08:05:55 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/simulation
+Info: 2024.04.08.08:05:55 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2024.04.08.08:05:55 Info: Finished: Create Modelsim Project.
+Info: 2024.04.08.08:05:55 Info: Starting: Create block symbol file (.bsf)
+Info: 2024.04.08.08:05:55 Info: qsys-generate D:\dev\FPGA-Drone\my_first_hps-fpga\Soc_system_clean\soc_system.qsys --block-symbol-file --output-directory=D:\dev\FPGA-Drone\my_first_hps-fpga\Soc_system_clean\soc_system --family="Cyclone V" --part=5CSEMA4U23C6
+Info: 2024.04.08.08:05:55 Info: Loading Soc_system_clean
+Info: 2024.04.08.08:05:55 Info: Reading input file
+Info: 2024.04.08.08:05:55 Info: Adding MemoryDMA [altera_avalon_sgdma 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module MemoryDMA
+Info: 2024.04.08.08:05:55 Info: Adding clk_0 [clock_source 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module clk_0
+Info: 2024.04.08.08:05:55 Info: Adding dma_0 [altera_avalon_dma 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module dma_0
+Info: 2024.04.08.08:05:55 Info: Adding fpga_only_master [altera_jtag_avalon_master 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module fpga_only_master
+Info: 2024.04.08.08:05:55 Info: Adding hps_0 [altera_hps 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module hps_0
+Info: 2024.04.08.08:05:55 Info: Adding hps_only_master [altera_jtag_avalon_master 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module hps_only_master
+Info: 2024.04.08.08:05:55 Info: Adding intr_capturer_0 [intr_capturer 1.0]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module intr_capturer_0
+Info: 2024.04.08.08:05:55 Info: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module jtag_uart
+Info: 2024.04.08.08:05:55 Info: Adding mm_clock_crossing_bridge_0 [altera_avalon_mm_clock_crossing_bridge 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module mm_clock_crossing_bridge_0
+Info: 2024.04.08.08:05:55 Info: Adding myBus [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module myBus
+Info: 2024.04.08.08:05:55 Info: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module onchip_memory2_0
+Info: 2024.04.08.08:05:55 Info: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module onchip_memory2_1
+Info: 2024.04.08.08:05:55 Info: Adding pio_led [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module pio_led
+Info: 2024.04.08.08:05:55 Info: Adding pio_reg1 [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module pio_reg1
+Info: 2024.04.08.08:05:55 Info: Adding pio_reg2 [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module pio_reg2
+Info: 2024.04.08.08:05:55 Info: Adding pio_reg3 [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module pio_reg3
+Info: 2024.04.08.08:05:55 Info: Adding pll_0 [altera_pll 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module pll_0
+Info: 2024.04.08.08:05:55 Info: Adding sysid_qsys [altera_avalon_sysid_qsys 18.1]
+Info: 2024.04.08.08:05:55 Info: Parameterizing module sysid_qsys
+Info: 2024.04.08.08:05:55 Info: Building connections
+Info: 2024.04.08.08:05:55 Info: Parameterizing connections
+Info: 2024.04.08.08:05:55 Info: Validating
+Info: 2024.04.08.08:06:02 Info: Done reading input file
+Info: 2024.04.08.08:06:06 Info: soc_system.MemoryDMA: Scatter-Gather DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: 2024.04.08.08:06:06 Info: soc_system.dma_0: DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: 2024.04.08.08:06:06 Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2024.04.08.08:06:06 Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2024.04.08.08:06:06 Warning: soc_system.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2024.04.08.08:06:06 Info: soc_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: 2024.04.08.08:06:06 Info: soc_system.pio_reg3: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2024.04.08.08:06:06 Info: soc_system.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: 2024.04.08.08:06:06 Info: soc_system.pll_0: Able to implement PLL with user settings
+Info: 2024.04.08.08:06:06 Info: soc_system.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: 2024.04.08.08:06:06 Info: soc_system.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Warning: 2024.04.08.08:06:06 Warning: soc_system.pll_0: pll_0.locked must be exported, or connected to a matching conduit.
+Warning: 2024.04.08.08:06:06 Warning: soc_system.MemoryDMA: Interrupt sender MemoryDMA.csr_irq is not connected to an interrupt receiver
+Warning: 2024.04.08.08:06:06 Warning: soc_system.dma_0: Interrupt sender dma_0.irq is not connected to an interrupt receiver
+Info: 2024.04.08.08:06:06 Info: qsys-generate succeeded.
+Info: 2024.04.08.08:06:06 Info: Finished: Create block symbol file (.bsf)
+Info: 2024.04.08.08:06:06 Info:
+Info: 2024.04.08.08:06:06 Info: Starting: Create HDL design files for synthesis
+Info: 2024.04.08.08:06:06 Info: qsys-generate D:\dev\FPGA-Drone\my_first_hps-fpga\Soc_system_clean\soc_system.qsys --synthesis=VHDL --output-directory=D:\dev\FPGA-Drone\my_first_hps-fpga\Soc_system_clean\soc_system\synthesis --family="Cyclone V" --part=5CSEMA4U23C6
+Info: 2024.04.08.08:06:06 Info: Loading Soc_system_clean
+Info: 2024.04.08.08:06:07 Info: Reading input file
+Info: 2024.04.08.08:06:07 Info: Adding MemoryDMA [altera_avalon_sgdma 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module MemoryDMA
+Info: 2024.04.08.08:06:07 Info: Adding clk_0 [clock_source 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module clk_0
+Info: 2024.04.08.08:06:07 Info: Adding dma_0 [altera_avalon_dma 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module dma_0
+Info: 2024.04.08.08:06:07 Info: Adding fpga_only_master [altera_jtag_avalon_master 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module fpga_only_master
+Info: 2024.04.08.08:06:07 Info: Adding hps_0 [altera_hps 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module hps_0
+Info: 2024.04.08.08:06:07 Info: Adding hps_only_master [altera_jtag_avalon_master 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module hps_only_master
+Info: 2024.04.08.08:06:07 Info: Adding intr_capturer_0 [intr_capturer 1.0]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module intr_capturer_0
+Info: 2024.04.08.08:06:07 Info: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module jtag_uart
+Info: 2024.04.08.08:06:07 Info: Adding mm_clock_crossing_bridge_0 [altera_avalon_mm_clock_crossing_bridge 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module mm_clock_crossing_bridge_0
+Info: 2024.04.08.08:06:07 Info: Adding myBus [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module myBus
+Info: 2024.04.08.08:06:07 Info: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module onchip_memory2_0
+Info: 2024.04.08.08:06:07 Info: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module onchip_memory2_1
+Info: 2024.04.08.08:06:07 Info: Adding pio_led [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module pio_led
+Info: 2024.04.08.08:06:07 Info: Adding pio_reg1 [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module pio_reg1
+Info: 2024.04.08.08:06:07 Info: Adding pio_reg2 [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module pio_reg2
+Info: 2024.04.08.08:06:07 Info: Adding pio_reg3 [altera_avalon_pio 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module pio_reg3
+Info: 2024.04.08.08:06:07 Info: Adding pll_0 [altera_pll 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module pll_0
+Info: 2024.04.08.08:06:07 Info: Adding sysid_qsys [altera_avalon_sysid_qsys 18.1]
+Info: 2024.04.08.08:06:07 Info: Parameterizing module sysid_qsys
+Info: 2024.04.08.08:06:07 Info: Building connections
+Info: 2024.04.08.08:06:07 Info: Parameterizing connections
+Info: 2024.04.08.08:06:07 Info: Validating
+Info: 2024.04.08.08:06:14 Info: Done reading input file
+Info: 2024.04.08.08:06:18 Info: soc_system.MemoryDMA: Scatter-Gather DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: 2024.04.08.08:06:18 Info: soc_system.dma_0: DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: 2024.04.08.08:06:18 Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2024.04.08.08:06:18 Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2024.04.08.08:06:18 Warning: soc_system.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2024.04.08.08:06:18 Info: soc_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: 2024.04.08.08:06:18 Info: soc_system.pio_reg3: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2024.04.08.08:06:18 Info: soc_system.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: 2024.04.08.08:06:18 Info: soc_system.pll_0: Able to implement PLL with user settings
+Info: 2024.04.08.08:06:18 Info: soc_system.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: 2024.04.08.08:06:18 Info: soc_system.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Warning: 2024.04.08.08:06:18 Warning: soc_system.pll_0: pll_0.locked must be exported, or connected to a matching conduit.
+Warning: 2024.04.08.08:06:18 Warning: soc_system.MemoryDMA: Interrupt sender MemoryDMA.csr_irq is not connected to an interrupt receiver
+Warning: 2024.04.08.08:06:18 Warning: soc_system.dma_0: Interrupt sender dma_0.irq is not connected to an interrupt receiver
+Info: 2024.04.08.08:06:20 Info: soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
+Info: 2024.04.08.08:06:27 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: 2024.04.08.08:06:27 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
+Info: 2024.04.08.08:06:27 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has burstcount signal 1 bit wide, but the slave is 0 bit wide.
+Info: 2024.04.08.08:06:27 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has address signal 4 bit wide, but the slave is 2 bit wide.
+Info: 2024.04.08.08:06:27 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has read signal 1 bit wide, but the slave is 0 bit wide.
+Info: 2024.04.08.08:06:27 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has byteenable signal 4 bit wide, but the slave is 0 bit wide.
+Info: 2024.04.08.08:06:27 Info: Interconnect is inserted between master mm_clock_crossing_bridge_0.m0 and slave myBus.s1 because the master has debugaccess signal 1 bit wide, but the slave is 0 bit wide.
+Warning: 2024.04.08.08:06:28 Warning: hps_0.f2h_irq0: Cannot connect clock for irq_mapper.sender
+Warning: 2024.04.08.08:06:28 Warning: hps_0.f2h_irq0: Cannot connect reset for irq_mapper.sender
+Warning: 2024.04.08.08:06:28 Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+Warning: 2024.04.08.08:06:28 Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: 2024.04.08.08:06:34 Info: MemoryDMA: Starting RTL generation for module 'soc_system_MemoryDMA'
+Info: 2024.04.08.08:06:34 Info: MemoryDMA:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=soc_system_MemoryDMA --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0027_MemoryDMA_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0027_MemoryDMA_gen/
+Info: 2024.04.08.08:06:35 Info: MemoryDMA: Done RTL generation for module 'soc_system_MemoryDMA'
+Info: 2024.04.08.08:06:35 Info: MemoryDMA: "soc_system" instantiated altera_avalon_sgdma "MemoryDMA"
+Info: 2024.04.08.08:06:35 Info: dma_0: softresetEnable = 1
+Info: 2024.04.08.08:06:35 Info: dma_0: Starting RTL generation for module 'soc_system_dma_0'
+Info: 2024.04.08.08:06:35 Info: dma_0:   Generation command is [exec D:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I D:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_dma -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_dma/generate_rtl.pl --name=soc_system_dma_0 --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0028_dma_0_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0028_dma_0_gen/
+Info: 2024.04.08.08:06:36 Info: dma_0: # 2024.04.08 08:06:35 (*)   soc_system_dma_0: allowing these transactions: doubleword, word, hw, byte_access
+Info: 2024.04.08.08:06:36 Info: dma_0: Done RTL generation for module 'soc_system_dma_0'
+Info: 2024.04.08.08:06:36 Info: dma_0: "soc_system" instantiated altera_avalon_dma "dma_0"
+Info: 2024.04.08.08:06:36 Info: fpga_only_master: "soc_system" instantiated altera_jtag_avalon_master "fpga_only_master"
+Info: 2024.04.08.08:06:36 Info: hps_0: "Running  for module: hps_0"
+Info: 2024.04.08.08:06:37 Info: hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2024.04.08.08:06:37 Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2024.04.08.08:06:37 Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2024.04.08.08:06:40 Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
+Info: 2024.04.08.08:06:40 Info: intr_capturer_0: "soc_system" instantiated intr_capturer "intr_capturer_0"
+Info: 2024.04.08.08:06:40 Info: jtag_uart: Starting RTL generation for module 'soc_system_jtag_uart'
+Info: 2024.04.08.08:06:40 Info: jtag_uart:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0030_jtag_uart_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0030_jtag_uart_gen/
+Info: 2024.04.08.08:06:40 Info: jtag_uart: Done RTL generation for module 'soc_system_jtag_uart'
+Info: 2024.04.08.08:06:40 Info: jtag_uart: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: 2024.04.08.08:06:40 Info: mm_clock_crossing_bridge_0: "soc_system" instantiated altera_avalon_mm_clock_crossing_bridge "mm_clock_crossing_bridge_0"
+Info: 2024.04.08.08:06:40 Info: myBus: Starting RTL generation for module 'soc_system_myBus'
+Info: 2024.04.08.08:06:40 Info: myBus:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_myBus --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0032_myBus_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0032_myBus_gen/
+Info: 2024.04.08.08:06:40 Info: myBus: Done RTL generation for module 'soc_system_myBus'
+Info: 2024.04.08.08:06:40 Info: myBus: "soc_system" instantiated altera_avalon_pio "myBus"
+Info: 2024.04.08.08:06:40 Info: onchip_memory2_0: Starting RTL generation for module 'soc_system_onchip_memory2_0'
+Info: 2024.04.08.08:06:40 Info: onchip_memory2_0:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_onchip_memory2_0 --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0033_onchip_memory2_0_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0033_onchip_memory2_0_gen/
+Info: 2024.04.08.08:06:41 Info: onchip_memory2_0: Done RTL generation for module 'soc_system_onchip_memory2_0'
+Info: 2024.04.08.08:06:41 Info: onchip_memory2_0: "soc_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: 2024.04.08.08:06:41 Info: onchip_memory2_1: Starting RTL generation for module 'soc_system_onchip_memory2_1'
+Info: 2024.04.08.08:06:41 Info: onchip_memory2_1:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_onchip_memory2_1 --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0034_onchip_memory2_1_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0034_onchip_memory2_1_gen/
+Info: 2024.04.08.08:06:41 Info: onchip_memory2_1: Done RTL generation for module 'soc_system_onchip_memory2_1'
+Info: 2024.04.08.08:06:41 Info: onchip_memory2_1: "soc_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_1"
+Info: 2024.04.08.08:06:41 Info: pio_led: Starting RTL generation for module 'soc_system_pio_led'
+Info: 2024.04.08.08:06:41 Info: pio_led:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_pio_led --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0035_pio_led_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0035_pio_led_gen/
+Info: 2024.04.08.08:06:41 Info: pio_led: Done RTL generation for module 'soc_system_pio_led'
+Info: 2024.04.08.08:06:41 Info: pio_led: "soc_system" instantiated altera_avalon_pio "pio_led"
+Info: 2024.04.08.08:06:41 Info: pio_reg3: Starting RTL generation for module 'soc_system_pio_reg3'
+Info: 2024.04.08.08:06:41 Info: pio_reg3:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_pio_reg3 --dir=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0036_pio_reg3_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/45EB~1/AppData/Local/Temp/alt9821_298242698873137608.dir/0036_pio_reg3_gen/
+Info: 2024.04.08.08:06:41 Info: pio_reg3: Done RTL generation for module 'soc_system_pio_reg3'
+Info: 2024.04.08.08:06:41 Info: pio_reg3: "soc_system" instantiated altera_avalon_pio "pio_reg3"
+Info: 2024.04.08.08:06:42 Info: pll_0: "soc_system" instantiated altera_pll "pll_0"
+Info: 2024.04.08.08:06:42 Info: sysid_qsys: "soc_system" instantiated altera_avalon_sysid_qsys "sysid_qsys"
+Info: 2024.04.08.08:06:44 Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: 2024.04.08.08:06:52 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:06:53 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:06:53 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:06:54 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:06:54 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:06:55 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:06:55 Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:06:56 Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:06:56 Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:06:56 Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:06:57 Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:06:57 Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: 2024.04.08.08:07:03 Info: mm_interconnect_1: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: 2024.04.08.08:07:04 Info: mm_interconnect_2: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: 2024.04.08.08:07:04 Info: irq_mapper: "soc_system" instantiated altera_irq_mapper "irq_mapper"
+Info: 2024.04.08.08:07:04 Info: irq_mapper_001: "soc_system" instantiated altera_irq_mapper "irq_mapper_001"
+Info: 2024.04.08.08:07:04 Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
+Info: 2024.04.08.08:07:04 Info: jtag_phy_embedded_in_jtag_master: "fpga_only_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: 2024.04.08.08:07:04 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:04 Info: timing_adt: "fpga_only_master" instantiated timing_adapter "timing_adt"
+Info: 2024.04.08.08:07:04 Info: fifo: "fpga_only_master" instantiated altera_avalon_sc_fifo "fifo"
+Info: 2024.04.08.08:07:04 Info: b2p: "fpga_only_master" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: 2024.04.08.08:07:04 Info: p2b: "fpga_only_master" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: 2024.04.08.08:07:04 Info: transacto: "fpga_only_master" instantiated altera_avalon_packets_to_master "transacto"
+Info: 2024.04.08.08:07:04 Info: b2p_adapter: "fpga_only_master" instantiated channel_adapter "b2p_adapter"
+Info: 2024.04.08.08:07:05 Info: p2b_adapter: "fpga_only_master" instantiated channel_adapter "p2b_adapter"
+Info: 2024.04.08.08:07:05 Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: 2024.04.08.08:07:05 Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: 2024.04.08.08:07:05 Info: MemoryDMA_descriptor_read_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "MemoryDMA_descriptor_read_translator"
+Info: 2024.04.08.08:07:05 Info: MemoryDMA_descriptor_read_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "MemoryDMA_descriptor_read_agent"
+Info: 2024.04.08.08:07:06 Info: hps_0_f2h_axi_slave_agent: "mm_interconnect_0" instantiated altera_merlin_axi_slave_ni "hps_0_f2h_axi_slave_agent"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: 2024.04.08.08:07:06 Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: 2024.04.08.08:07:06 Info: MemoryDMA_descriptor_read_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "MemoryDMA_descriptor_read_limiter"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2024.04.08.08:07:06 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: 2024.04.08.08:07:06 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2024.04.08.08:07:06 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: 2024.04.08.08:07:06 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: hps_0_f2h_axi_slave_wr_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "hps_0_f2h_axi_slave_wr_cmd_width_adapter"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: onchip_memory2_0_s1_translator: "mm_interconnect_1" instantiated altera_merlin_slave_translator "onchip_memory2_0_s1_translator"
+Info: 2024.04.08.08:07:06 Info: hps_0_h2f_axi_master_agent: "mm_interconnect_1" instantiated altera_merlin_axi_master_ni "hps_0_h2f_axi_master_agent"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: onchip_memory2_0_s1_agent: "mm_interconnect_1" instantiated altera_merlin_slave_agent "onchip_memory2_0_s1_agent"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: 2024.04.08.08:07:06 Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: 2024.04.08.08:07:06 Info: router_003: "mm_interconnect_1" instantiated altera_merlin_router "router_003"
+Info: 2024.04.08.08:07:06 Info: router_005: "mm_interconnect_1" instantiated altera_merlin_router "router_005"
+Info: 2024.04.08.08:07:06 Info: router_007: "mm_interconnect_1" instantiated altera_merlin_router "router_007"
+Info: 2024.04.08.08:07:06 Info: router_008: "mm_interconnect_1" instantiated altera_merlin_router "router_008"
+Info: 2024.04.08.08:07:06 Info: router_009: "mm_interconnect_1" instantiated altera_merlin_router "router_009"
+Info: 2024.04.08.08:07:06 Info: router_010: "mm_interconnect_1" instantiated altera_merlin_router "router_010"
+Info: 2024.04.08.08:07:06 Info: router_011: "mm_interconnect_1" instantiated altera_merlin_router "router_011"
+Info: 2024.04.08.08:07:06 Info: router_012: "mm_interconnect_1" instantiated altera_merlin_router "router_012"
+Info: 2024.04.08.08:07:06 Info: router_013: "mm_interconnect_1" instantiated altera_merlin_router "router_013"
+Info: 2024.04.08.08:07:06 Info: router_019: "mm_interconnect_1" instantiated altera_merlin_router "router_019"
+Info: 2024.04.08.08:07:06 Info: onchip_memory2_0_s1_burst_adapter: "mm_interconnect_1" instantiated altera_merlin_burst_adapter "onchip_memory2_0_s1_burst_adapter"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2024.04.08.08:07:06 Info: cmd_demux_002: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux_002"
+Info: 2024.04.08.08:07:06 Info: cmd_demux_004: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux_004"
+Info: 2024.04.08.08:07:06 Info: cmd_demux_005: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux_005"
+Info: 2024.04.08.08:07:06 Info: cmd_demux_007: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux_007"
+Info: 2024.04.08.08:07:06 Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: cmd_mux_001: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: cmd_mux_003: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux_003"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: cmd_mux_004: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux_004"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: cmd_mux_011: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux_011"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: 2024.04.08.08:07:06 Info: rsp_demux_003: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_003"
+Info: 2024.04.08.08:07:06 Info: rsp_demux_004: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_004"
+Info: 2024.04.08.08:07:06 Info: rsp_demux_011: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_011"
+Info: 2024.04.08.08:07:06 Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: rsp_mux_002: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux_002"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: rsp_mux_005: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux_005"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:06 Info: rsp_mux_007: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux_007"
+Info: 2024.04.08.08:07:06 Info: Reusing file D:/dev/FPGA-Drone/my_first_hps-fpga/Soc_system_clean/soc_system/synthesis/submodules
+Info: 2024.04.08.08:07:07 Info: avalon_st_adapter: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: 2024.04.08.08:07:08 Info: avalon_st_adapter_001: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: 2024.04.08.08:07:27 Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: 2024.04.08.08:07:27 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: 2024.04.08.08:07:27 Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
+Info: 2024.04.08.08:07:27 Info: soc_system: Done "soc_system" with 82 modules, 156 files
+Info: 2024.04.08.08:07:28 Info: qsys-generate succeeded.
+Info: 2024.04.08.08:07:28 Info: Finished: Create HDL design files for synthesis
+Info (11904): Restoring file "soc_system.BAK.qsys" to "soc_system.qsys"
+Error (14923): Error upgrading Platform Designer file "soc_system.qsys"
+Error (11890): Unable to automatically upgrade Platform Designer component. Please manually upgrade "soc_system.qsys" in Platform Designer
+Error (23031): Evaluation of Tcl script d:/intelfpga_lite/18.1/quartus/common/tcl/internal/ip_regen/ip_regen.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 97 errors, 35 warnings
+    Error: Peak virtual memory: 4893 megabytes
+    Error: Processing ended: Mon Apr 08 08:07:42 2024
+    Error: Elapsed time: 00:04:29
+    Error: Total CPU time (on all processors): 00:05:14
+
+
